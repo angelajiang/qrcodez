@@ -1,9 +1,18 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
-gem 'mysql2'
 gem 'slim'
 gem 'slim-rails'
+gem 'taps'
+gem 'activerecord-postgresql-adapter'
+
+group :development, :test do
+  gem 'mysql2'
+end
+
+group :production do
+  gem 'pg'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
